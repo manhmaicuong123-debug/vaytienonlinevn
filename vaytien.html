@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>vaytienonlinevn - Giải pháp tài chính trực tuyến</title>
+
+<meta name="description" content="LoanHub - So sánh và tìm hiểu các giải pháp tài chính trực tuyến phù hợp với nhu cầu của bạn.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#070b14;
+    color:#f5f7fb;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,11,20,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#35d6ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#b9c2d0;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#35d6ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    padding:100px 0 80px;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(53,214,255,.14),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(101,76,255,.13),transparent 30%);
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+    background:rgba(53,214,255,.1);
+    color:#35d6ff;
+    font-size:13px;
+    margin-bottom:20px;
+    border:1px solid rgba(53,214,255,.2);
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.12;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#35d6ff;
+}
+
+.hero p{
+    color:#aab4c4;
+    max-width:680px;
+    margin:0 auto 30px;
+    font-size:17px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#35d6ff;
+    color:#041018;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    border:1px solid #303b4e;
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:#151c29;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#8e9aad;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:#0d1320;
+    padding:30px;
+    border-radius:16px;
+    border:1px solid #1d2635;
+}
+
+.feature-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#8e9aad;
+    font-size:14px;
+}
+
+/* OFFERS */
+
+.offers{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.offer{
+    background:linear-gradient(145deg,#0e1522,#0a0f19);
+    border:1px solid #202b3c;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.offer:hover{
+    transform:translateY(-4px);
+    border-color:#35d6ff;
+}
+
+.offer-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.offer-name{
+    font-size:23px;
+    font-weight:800;
+}
+
+.tag{
+    background:rgba(53,214,255,.12);
+    color:#35d6ff;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.offer-description{
+    color:#9da8b8;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.offer ul{
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.offer li{
+    margin:9px 0;
+    color:#d7dde7;
+    font-size:14px;
+}
+
+.offer li::before{
+    content:"✓";
+    color:#35d6ff;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.offer-btn{
+    display:block;
+    text-align:center;
+    padding:12px;
+    border-radius:9px;
+    background:#35d6ff;
+    color:#041018;
+    font-weight:800;
+}
+
+.offer-btn:hover{
+    opacity:.9;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    text-align:center;
+    background:#0d1320;
+    padding:25px 18px;
+    border:1px solid #1d2635;
+    border-radius:15px;
+}
+
+.step-number{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    background:#35d6ff;
+    color:#041018;
+    border-radius:50%;
+    font-weight:800;
+}
+
+.step p{
+    color:#8e9aad;
+    font-size:14px;
+}
+
+/* REVIEWS */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    background:#0d1320;
+    border:1px solid #1d2635;
+    border-radius:15px;
+    padding:25px;
+}
+
+.stars{
+    color:#ffd166;
+    margin-bottom:12px;
+}
+
+.review p{
+    color:#b3bdcb;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.review strong{
+    font-size:14px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:#0d1320;
+    border:1px solid #1d2635;
+    margin-bottom:12px;
+    border-radius:10px;
+    padding:18px 20px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:700;
+}
+
+details p{
+    color:#9da8b8;
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#9da8b8;
+    margin-bottom:15px;
+}
+
+.about-box{
+    background:linear-gradient(145deg,#111a2a,#0b101a);
+    border:1px solid #263246;
+    padding:35px;
+    border-radius:20px;
+}
+
+.about-box h3{
+    margin-bottom:15px;
+}
+
+/* POLICIES */
+
+.policy{
+    max-width:900px;
+    margin:auto;
+}
+
+.policy-card{
+    background:#0d1320;
+    border:1px solid #1d2635;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:20px;
+}
+
+.policy-card h3{
+    margin-bottom:10px;
+}
+
+.policy-card p{
+    color:#9da8b8;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,#0e2431,#10182a);
+    border:1px solid #254355;
+    border-radius:22px;
+    padding:55px 30px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#aab4c4;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #1c2635;
+    padding:40px 0;
+    color:#7f8a9c;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+footer p,
+footer a{
+    font-size:13px;
+    color:#7f8a9c;
+}
+
+footer a{
+    display:block;
+    margin-bottom:7px;
+}
+
+.copyright{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #1c2635;
+    text-align:center;
+    font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#080d17;
+        flex-direction:column;
+        padding:20px;
+        border-bottom:1px solid #1d2635;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .features,
+    .offers,
+    .steps,
+    .reviews,
+    .about,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="container navbar">
+
+<a href="#" class="logo">
+vaytien<span>onlinevn</span>
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#about">Giới thiệu</a></li>
+<li><a href="#offers">Đối tác</a></li>
+<li><a href="#steps">Cách hoạt động</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#policy">Chính sách</a></li>
+</ul>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+GIẢI PHÁP TÀI CHÍNH TRỰC TUYẾN
+</div>
+
+<h1>
+Tìm hiểu các lựa chọn
+<span>vay online</span> phù hợp
+</h1>
+
+<p>
+Khám phá và so sánh nhiều lựa chọn tài chính trực tuyến
+trên cùng một nền tảng. Lựa chọn dịch vụ phù hợp với
+nhu cầu và điều kiện của bạn.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#offers" class="btn btn-primary">
+Xem các lựa chọn
+</a>
+
+<a href="#steps" class="btn btn-secondary">
+Cách hoạt động
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Tại sao nên tìm hiểu trước?</h2>
+
+<p>
+Chủ động xem thông tin trước khi quyết định đăng ký.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🔎</div>
+
+<h3>Dễ dàng tìm hiểu</h3>
+
+<p>
+Thông tin được trình bày rõ ràng giúp bạn nhanh chóng
+tìm hiểu các lựa chọn đang có.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">⚡</div>
+
+<h3>Đăng ký trực tuyến</h3>
+
+<p>
+Bạn có thể truy cập trực tiếp website của từng đơn vị
+để xem điều kiện và thực hiện đăng ký.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🛡️</div>
+
+<h3>Chủ động lựa chọn</h3>
+
+<p>
+Bạn có quyền lựa chọn dịch vụ phù hợp dựa trên thông tin
+và điều kiện thực tế của mình.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFERS -->
+
+<section id="offers">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Các lựa chọn tài chính</h2>
+
+<p>
+Tham khảo thông tin của 8 đối tác dưới đây.
+</p>
+
+</div>
+
+
+<div class="offers">
+
+
+<!-- 1 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Mazilla</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Giải pháp tài chính trực tuyến dành cho khách hàng
+muốn tìm hiểu và đăng ký nhanh chóng.
+</p>
+
+<ul>
+
+<li>Đăng ký trực tuyến</li>
+<li>Quy trình đơn giản</li>
+<li>Tiết kiệm thời gian</li>
+<li>Có thể kiểm tra điều kiện trước</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-1.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Cashonline</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Một lựa chọn khác dành cho người dùng muốn tìm hiểu
+các giải pháp tài chính trực tuyến.
+</p>
+
+<ul>
+
+<li>Thao tác online</li>
+<li>Giao diện dễ sử dụng</li>
+<li>Đăng ký thuận tiện</li>
+<li>Tiếp cận thông tin nhanh</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-2.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Credilo</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Tham khảo một lựa chọn tài chính trực tuyến và xem
+các điều kiện áp dụng trước khi đăng ký.
+</p>
+
+<ul>
+
+<li>Đăng ký trực tuyến</li>
+<li>Quy trình thuận tiện</li>
+<li>Thông tin rõ ràng</li>
+<li>Tiết kiệm thời gian</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-3.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Credy</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Một lựa chọn để người dùng tìm hiểu thêm về các sản phẩm
+tài chính trực tuyến.
+</p>
+
+<ul>
+
+<li>Đăng ký online</li>
+<li>Thao tác thuận tiện</li>
+<li>Có thể tìm hiểu trước</li>
+<li>Quy trình trực tuyến</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-4.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Crezu</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Tìm hiểu thêm một lựa chọn tài chính trực tuyến trước
+khi đưa ra quyết định.
+</p>
+
+<ul>
+
+<li>Đăng ký trực tuyến</li>
+<li>Tiếp cận thông tin nhanh</li>
+<li>Thao tác đơn giản</li>
+<li>Có thể xem điều kiện</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-5.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Vaymeo</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Lựa chọn dành cho khách hàng muốn tìm hiểu giải pháp
+tài chính thông qua hình thức trực tuyến.
+</p>
+
+<ul>
+
+<li>Đăng ký online</li>
+<li>Quy trình thuận tiện</li>
+<li>Không cần đến trực tiếp</li>
+<li>Dễ dàng tiếp cận thông tin</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-6.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Finloo</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Một lựa chọn khác để người dùng tham khảo các dịch vụ
+tài chính trực tuyến.
+</p>
+
+<ul>
+
+<li>Đăng ký trực tuyến</li>
+<li>Tiết kiệm thời gian</li>
+<li>Thao tác đơn giản</li>
+<li>Tìm hiểu thông tin nhanh</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-7.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="offer">
+
+<div class="offer-top">
+
+<div class="offer-name">Finami</div>
+
+<div class="tag">Online</div>
+
+</div>
+
+<p class="offer-description">
+Khách hàng có thể tìm hiểu thông tin và điều kiện trước
+khi lựa chọn sản phẩm phù hợp.
+</p>
+
+<ul>
+
+<li>Đăng ký online</li>
+<li>Tiếp cận nhanh</li>
+<li>Quy trình thuận tiện</li>
+<li>Chủ động lựa chọn</li>
+
+</ul>
+
+<a href="https://LINK-CUA-BAN-8.com"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="offer-btn">
+Xem thông tin
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STEPS -->
+
+<section id="steps">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Các bước thực hiện</h2>
+
+<p>
+Quy trình tham khảo đơn giản.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h3>Chọn lựa chọn</h3>
+
+<p>
+Xem thông tin và lựa chọn dịch vụ bạn muốn tìm hiểu.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>Truy cập</h3>
+
+<p>
+Nhấn vào nút đăng ký để đến website của đối tác.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Điền thông tin</h3>
+
+<p>
+Cung cấp thông tin theo yêu cầu của đơn vị cung cấp.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>Chờ xét duyệt</h3>
+
+<p>
+Đơn vị cung cấp sẽ xem xét hồ sơ theo chính sách của họ.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about">
+
+<div>
+
+<h2>Về vaytienonlinevn</h2>
+
+<p>
+vaytienonlinevn được xây dựng nhằm giúp người dùng dễ dàng
+tiếp cận và tìm hiểu nhiều lựa chọn tài chính trực tuyến.
+</p>
+
+<p>
+Chúng tôi cung cấp thông tin tham khảo và liên kết đến
+các đối tác bên ngoài để người dùng có thể chủ động
+tìm hiểu thêm.
+</p>
+
+<p>
+vaytienonlinevn không phải là tổ chức tín dụng và không trực tiếp
+quyết định việc phê duyệt hồ sơ.
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>Thông tin quan trọng</h3>
+
+<p>
+Mỗi đơn vị có thể áp dụng điều kiện, phí, lãi suất,
+thời hạn và tiêu chí xét duyệt khác nhau.
+</p>
+
+<p>
+Vui lòng đọc kỹ điều khoản của đơn vị cung cấp trước
+khi gửi hồ sơ hoặc ký kết bất kỳ thỏa thuận nào.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Đánh giá khách hàng</h2>
+
+<p>
+Một số nhận xét minh họa về trải nghiệm sử dụng website.
+</p>
+
+</div>
+
+<div class="reviews">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Giao diện dễ sử dụng, tôi có thể xem nhiều lựa chọn
+trên cùng một trang."
+</p>
+
+<strong>— Minh Anh</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Thông tin được chia thành từng mục nên khá dễ tìm hiểu
+trước khi đăng ký."
+</p>
+
+<strong>— Hoàng Nam</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★☆</div>
+
+<p>
+"Tôi thích việc có nhiều lựa chọn để tự so sánh trước
+khi quyết định."
+</p>
+
+<strong>— Thanh Hà</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Câu hỏi thường gặp</h2>
+
+<p>
+Những câu hỏi người dùng thường quan tâm.
+</p>
+
+</div>
+
+<div class="faq">
+
+<details>
+
+<summary>Tôi có chắc chắn được duyệt khoản vay không?</summary>
+
+<p>
+Không. Việc phê duyệt hoàn toàn phụ thuộc vào điều kiện,
+hồ sơ và chính sách xét duyệt của từng đơn vị.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Website có trực tiếp cho vay không?</summary>
+
+<p>
+Không. Website chỉ cung cấp thông tin tham khảo và liên
+kết đến các đơn vị bên ngoài.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Lãi suất và chi phí là bao nhiêu?</summary>
+
+<p>
+Lãi suất, phí và các chi phí liên quan có thể khác nhau
+tùy từng sản phẩm. Người dùng cần kiểm tra thông tin
+trực tiếp trên website của đơn vị cung cấp.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Tôi có thể đăng ký nhiều nơi không?</summary>
+
+<p>
+Bạn nên cân nhắc kỹ nhu cầu tài chính và đọc điều kiện
+của từng đơn vị trước khi đăng ký.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>Tôi cần chuẩn bị gì?</summary>
+
+<p>
+Thông thường bạn sẽ cần cung cấp các thông tin cá nhân
+theo yêu cầu của đơn vị cung cấp. Yêu cầu cụ thể có thể
+khác nhau.
+</p>
+
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>Bắt đầu tìm hiểu ngay</h2>
+
+<p>
+Xem các lựa chọn tài chính và tìm hiểu điều kiện phù hợp
+với nhu cầu của bạn.
+</p>
+
+<a href="#offers" class="btn btn-primary">
+Xem các lựa chọn
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- POLICY -->
+
+<section id="policy">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Chính sách & Điều khoản</h2>
+
+<p>
+Thông tin cần đọc trước khi sử dụng website.
+</p>
+
+</div>
+
+<div class="policy">
+
+<div class="policy-card">
+
+<h3>Chính sách bảo mật</h3>
+
+<p>
+LoanHub tôn trọng quyền riêng tư của người dùng. Website
+không yêu cầu người dùng cung cấp thông tin cá nhân trực
+tiếp để xem nội dung. Khi người dùng chuyển sang website
+của đối tác, việc thu thập và xử lý dữ liệu sẽ tuân theo
+chính sách riêng của đối tác đó.
+</p>
+
+</div>
+
+
+<div class="policy-card">
+
+<h3>Điều khoản sử dụng</h3>
+
+<p>
+Thông tin trên website chỉ mang tính chất tham khảo.
+Người dùng có trách nhiệm kiểm tra điều kiện, phí, lãi suất,
+thời hạn và các điều khoản trực tiếp với đơn vị cung cấp
+trước khi đăng ký.
+</p>
+
+</div>
+
+
+<div class="policy-card">
+
+<h3>Thông báo liên kết đối tác</h3>
+
+<p>
+Một số liên kết trên website có thể là liên kết đối tác
+(affiliate). Website có thể nhận hoa hồng khi người dùng
+truy cập hoặc đăng ký thông qua một số liên kết.
+Điều này không làm thay đổi chi phí hoặc điều kiện do
+đơn vị cung cấp quy định.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>LoanHub</h3>
+
+<p>
+Nền tảng thông tin và tham khảo các giải pháp tài chính
+trực tuyến.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Điều hướng</h3>
+
+<a href="#about">Giới thiệu</a>
+<a href="#offers">Đối tác</a>
+<a href="#steps">Cách hoạt động</a>
+<a href="#faq">FAQ</a>
+
+</div>
+
+
+<div>
+
+<h3>Pháp lý</h3>
+
+<a href="#policy">Chính sách bảo mật</a>
+<a href="#policy">Điều khoản sử dụng</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 LoanHub. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
